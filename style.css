@@ -7,37 +7,43 @@ body {
     color: #333;
 }
 
-.language-switcher {
-    text-align: center;
-    margin-bottom: 15px;
-    padding-top: 15px;
-}
-
-.language-switcher button {
-    padding: 8px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-
-.language-switcher button:hover {
-    background-color: #ddd;
-}
-
 .container {
+    position: relative; /* Needed for absolute positioning of the switcher */
     max-width: 800px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 40px 20px 20px 20px; /* Increased top padding to make space */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+.language-switcher {
+    position: absolute;
+    top: 15px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+}
+
+.language-switcher button {
+    padding: 5px 10px;
+    margin-left: 5px; /* Space between buttons */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #3498db; /* Link-like color */
+    font-size: 0.9em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #ecf0f1; /* Light background on hover */
+    color: #2980b9;
+}
+
+
 header {
     text-align: center;
+    /* Removed margin-bottom from here as container padding handles top space */
     margin-bottom: 30px;
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
