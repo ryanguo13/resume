@@ -67,43 +67,72 @@ header p {
     color: #95a5a6;
 }
 
-.section {
-    margin-bottom: 25px;
+/* Styles for content generated from Markdown */
+.language-content h1 { /* For the name */
+    margin: 0;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
 }
 
-.section h2 {
+.language-content h1 + p { /* For the job title */
+    margin: 5px 0 15px 0; /* Added bottom margin */
+    font-size: 1.1em;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+.language-content p:nth-of-type(2), /* Contact Info Line 1 */
+.language-content p:nth-of-type(3) { /* Contact Info Line 2 */
+    margin: 2px 0;
+    font-size: 0.9em;
+    color: #95a5a6;
+    text-align: center;
+}
+
+.language-content hr { /* Separator between header and sections */
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 30px 0;
+}
+
+.language-content h2 { /* Section Titles */
     font-size: 1.8em;
     color: #34495e;
     border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    margin-top: 30px; /* Replaces .section margin */
+    margin-bottom: 20px; /* Increased margin */
 }
 
-.item {
-    margin-bottom: 15px;
-}
-
-.item h3 {
-    margin: 0 0 5px 0;
+.language-content h3 { /* Item Titles (Work/Edu/Project) */
+    margin: 15px 0 5px 0; /* Added top margin, replaces .item margin */
     font-size: 1.2em;
     color: #2980b9;
 }
 
-.item .date {
+.language-content h3 + p > em { /* Date - Assuming date is italicized paragraph after h3 */
+    display: block; /* Make it block level */
     font-size: 0.9em;
     color: #7f8c8d;
     margin-bottom: 8px;
+    font-style: normal; /* Override italic if needed */
 }
 
-ul {
-    padding-left: 20px;
+.language-content ul {
+    padding-left: 20px; /* Keep indentation */
     list-style-type: disc;
+    margin-top: 10px; /* Add some space before lists */
 }
 
-li {
+.language-content li {
     margin-bottom: 8px;
 }
 
-strong {
+.language-content strong { /* For labels like "编程语言:" */
     color: #555;
 }
+
+/* Remove styles dependent on old classes if they conflict */
+/* .section, .item, .item .date { } */ /* Keep this comment or remove the old rules */
