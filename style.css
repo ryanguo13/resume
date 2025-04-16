@@ -7,6 +7,26 @@ body {
     color: #333;
 }
 
+.language-switcher {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+.language-switcher button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.language-switcher button:hover {
+    background-color: #ddd;
+}
+
 .container {
     max-width: 800px;
     margin: 30px auto;
