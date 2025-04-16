@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Resume / 示例简历</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Marked.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="language-switcher">
@@ -12,163 +14,64 @@
         <button onclick="switchLanguage('en-US')">English</button>
     </div>
     <div class="container">
-        <!-- Simplified Chinese Content -->
-        <div id="lang-zh-CN" class="language-content">
-            <header>
-                <h1>示例姓名</h1>
-                <p>网页开发工程师</p>
-                <div class="contact-info">
-                    <p>邮箱: example@email.com | 电话: 0912-345-678 | 地点: 台北市</p>
-                    <p>个人网站: example.com | 领英: linkedin.com/in/example | GitHub: github.com/example</p>
-                </div>
-            </header>
-
-            <section class="section">
-                <h2>工作经历</h2>
-                <div class="item">
-                    <h3>资深前端工程师 | ABC 科技</h3>
-                    <p class="date">2020 年 8 月 - 至今</p>
-                    <ul>
-                        <li>负责开发与维护公司主要的 Web 应用程序。</li>
-                        <li>使用 React 和 TypeScript 创建可复用的 UI 组件。</li>
-                        <li>与后端团队合作，整合 API。</li>
-                        <li>优化网页性能，提升用户体验。</li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h3>前端工程师 | XYZ 公司</h3>
-                    <p class="date">2018 年 6 月 - 2020 年 7 月</p>
-                    <ul>
-                        <li>参与产品前端开发，使用 Vue.js。</li>
-                        <li>协助设计与实现用户界面。</li>
-                        <li>修复 Bug 并进行代码审查。</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>学历</h2>
-                <div class="item">
-                    <h3>信息工程学系 | 国立示例大学</h3>
-                    <p class="date">2014 年 9 月 - 2018 年 6 月</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>技能</h2>
-                <ul>
-                    <li><strong>编程语言:</strong> JavaScript, TypeScript, HTML, CSS, Python</li>
-                    <li><strong>框架/库:</strong> React, Vue.js, Node.js, Express</li>
-                    <li><strong>工具:</strong> Git, Webpack, Docker, Jest</li>
-                    <li><strong>其他:</strong> RESTful API, GraphQL, CI/CD</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>项目</h2>
-                 <div class="item">
-                    <h3>个人博客</h3>
-                    <p>使用 Next.js 和 Markdown 创建的静态博客。</p>
-                </div>
-                 <div class="item">
-                    <h3>待办事项应用程序</h3>
-                    <p>使用 React 和 Redux 开发的简单待办事项管理工具。</p>
-                </div>
-            </section>
-        </div>
-
-        <!-- English Content -->
-        <div id="lang-en-US" class="language-content" style="display: none;">
-             <header>
-                <h1>Sample Name</h1>
-                <p>Web Developer</p>
-                <div class="contact-info">
-                    <p>Email: example@email.com | Phone: 0912-345-678 | Location: Taipei City</p>
-                    <p>Website: example.com | LinkedIn: linkedin.com/in/example | GitHub: github.com/example</p>
-                </div>
-            </header>
-
-            <section class="section">
-                <h2>Work Experience</h2>
-                <div class="item">
-                    <h3>Senior Frontend Engineer | ABC Technology</h3>
-                    <p class="date">August 2020 - Present</p>
-                    <ul>
-                        <li>Responsible for developing and maintaining the company's main web application.</li>
-                        <li>Created reusable UI components using React and TypeScript.</li>
-                        <li>Collaborated with the backend team to integrate APIs.</li>
-                        <li>Optimized web performance to enhance user experience.</li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h3>Frontend Engineer | XYZ Company</h3>
-                    <p class="date">June 2018 - July 2020</p>
-                    <ul>
-                        <li>Participated in product frontend development using Vue.js.</li>
-                        <li>Assisted in designing and implementing user interfaces.</li>
-                        <li>Fixed bugs and conducted code reviews.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Education</h2>
-                <div class="item">
-                    <h3>Department of Computer Science | National Sample University</h3>
-                    <p class="date">September 2014 - June 2018</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Skills</h2>
-                <ul>
-                    <li><strong>Programming Languages:</strong> JavaScript, TypeScript, HTML, CSS, Python</li>
-                    <li><strong>Frameworks/Libraries:</strong> React, Vue.js, Node.js, Express</li>
-                    <li><strong>Tools:</strong> Git, Webpack, Docker, Jest</li>
-                    <li><strong>Others:</strong> RESTful API, GraphQL, CI/CD</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>Projects</h2>
-                 <div class="item">
-                    <h3>Personal Blog</h3>
-                    <p>A static blog built with Next.js and Markdown.</p>
-                </div>
-                 <div class="item">
-                    <h3>To-Do List Application</h3>
-                    <p>A simple to-do list manager developed with React and Redux.</p>
-                </div>
-            </section>
-        </div>
+        <!-- Content will be loaded here -->
+        <div id="lang-zh-CN" class="language-content"></div>
+        <div id="lang-en-US" class="language-content" style="display: none;"></div>
     </div>
 
     <script>
+        // Function to fetch and render Markdown content
+        async function loadContent(lang) {
+            const contentDiv = document.getElementById('lang-' + lang);
+            // Show loading indicator (optional)
+            contentDiv.innerHTML = '<p>Loading...</p>';
+            contentDiv.style.display = 'block'; // Make sure the container is visible
+
+            try {
+                const response = await fetch(`resume_${lang}.md`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const markdown = await response.text();
+                // Use marked to convert markdown to HTML
+                // Ensure marked is loaded before this script runs
+                contentDiv.innerHTML = marked.parse(markdown);
+            } catch (error) {
+                console.error('Error loading Markdown file:', error);
+                contentDiv.innerHTML = '<p>Error loading content. Please try again later.</p>';
+            }
+        }
+
+        // Function to switch language display
         function switchLanguage(lang) {
-            // Hide all language content
+            // Hide all language content divs
             document.querySelectorAll('.language-content').forEach(function(el) {
                 el.style.display = 'none';
             });
-            // Show the selected language content
-            document.getElementById('lang-' + lang).style.display = 'block';
+
+            const targetDiv = document.getElementById('lang-' + lang);
+            // If content hasn't been loaded yet, load it
+            if (!targetDiv.innerHTML.trim() || targetDiv.innerHTML.includes('Loading...') || targetDiv.innerHTML.includes('Error loading')) {
+                 loadContent(lang);
+            } else {
+                // If already loaded, just display it
+                targetDiv.style.display = 'block';
+            }
+
             // Optional: Store preference in localStorage
             // localStorage.setItem('preferredLanguage', lang);
         }
 
-        // Optional: Load preferred language on page load
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     const preferredLang = localStorage.getItem('preferredLanguage');
-        //     if (preferredLang) {
-        //         switchLanguage(preferredLang);
-        //     } else {
-        //         // Default to Chinese or browser language detection
-        //         switchLanguage('zh-CN');
-        //     }
-        // });
-
-        // Default to showing Chinese content initially
+        // Initial load (default to Chinese)
         document.addEventListener('DOMContentLoaded', function() {
-             switchLanguage('zh-CN');
+            // Optional: Load preferred language from localStorage first
+            // const preferredLang = localStorage.getItem('preferredLanguage');
+            // if (preferredLang && ['zh-CN', 'en-US'].includes(preferredLang)) {
+            //     switchLanguage(preferredLang);
+            // } else {
+            //     switchLanguage('zh-CN'); // Default language
+            // }
+             switchLanguage('zh-CN'); // Default language
         });
     </script>
 </body>
